@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/5fceabfbb1.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false"
+        data-bs-pause="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img class="d-block w-100" src="pictures/pexels-pixabay-206359.jpg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Book your next trip</h3>
+                    <p class="text-center">An arrangement you make to have a hotel room, tickets, etc. at a
+                        particular
+                        time in the future.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img class="d-block w-100" src="pictures/pexels-julius-silver-753626.jpg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Book your next trip</h3>
+                    <p class="text-center">An arrangement you make to have a hotel room, tickets, etc. at a
+                        particular
+                        time in the future.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img class="d-block w-100" src="pictures/pexels-sebastian-voortman-165505.jpg" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Book your next trip</h3>
+                    <p class="text-center">An arrangement you make to have a hotel room, tickets, etc. at a
+                        particular
+                        time in the future.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card wrapper-card">
+            <div class="row">
+                <div class="col-3 offset-1">
+                    <label for="select1">Leave from</label>
+                </div>
+                <div class="col-3">
+                    <label for="select2">To</label>
+                </div>
+                <div class="col-3">
+                    <label for="depart">Depart</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="btn-group col-3 offset-1">
+                    <select class="form-select form-control" id="select1" aria-label="Default select example">
+                        <option selected value="0"></option>
+                        <option value="1">Bucharest</option>
+                        <option value="2">Madrid</option>
+                        <option value="3">Stockholm</option>
+                        <option value="4">Lisbon</option>
+                        <option value="5">Praga</option>
+                    </select>
+                    <i class="fa-light fa-x" onclick="f1()"></i>
+                    <script>
+                        function f1() {
+                            document.querySelector('#select1').querySelectorAll('option')[0].selected = 'selected';
+                        }
+                    </script>
+                </div>
+                <div class="btn-group col-3">
+                    <select class="form-select" id="select2" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="1">Bucharest</option>
+                        <option value="2">Madrid</option>
+                        <option value="3">Stockholm</option>
+                        <option value="4">Lisbon</option>
+                        <option value="5">Praga</option>
+                    </select>
+                    <i class="fa-light fa-x" onclick="f2()"></i>
+                    <script>
+                        function f2() {
+                            document.querySelector('#select2').querySelectorAll('option')[0].selected = 'selected';
+                        }
+                    </script>
+                </div>
+                <div class="col-2">
+                    <input type="date" id="depart">
+                </div>
+                <div class="col-3">
+                    <button id="search-button" type="button" class="btn btn-primary text-center">Search</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-deck col-12 justify-content-center">
+                    <div class="card col-4 mx-3 my-4 mb-5">
+                        <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?cs=srgb&dl=pexels-pixabay-261102.jpg&fm=jpg"
+                            class="card-img-top" alt="holiday picture"
+                            onmouseenter="src='https://images.pexels.com/photos/2883047/pexels-photo-2883047.jpeg?cs=srgb&dl=pexels-karl-solano-2883047.jpg&fm=jpg';"
+                            onmouseleave="src='https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?cs=srgb&dl=pexels-pixabay-261102.jpg&fm=jpg';">
+                        <div class="card-text mx-3">
+                            <div class="room-type ">Private Room</div>
+                            <ul class="room-details">
+                                <li>2 Guests</li>
+                                <li>1 Bed</li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Rooftop Apartment</h5>
+                            <p class="card-text">An incredible view of the city. Our amazing outside pool will make you
+                                fill powerfull and free.</p>
+                        </div>
+                        <div class="card-footer c-f">
+                            <button type="button" class="btn btn-primary btn-sm">FROM / NIGHT</button>
+                        </div>
+                    </div>
+                    <div class="card col-4 mx-3 my-4">
+                        <img src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?cs=srgb&dl=pexels-donald-tong-189296.jpg&fm=jpg"
+                            class="card-img-top" alt="holiday picture"
+                            onmouseenter="src='https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg?cs=srgb&dl=pexels-pixabay-460537.jpg&fm=jpg';"
+                            onmouseleave="src='https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?cs=srgb&dl=pexels-donald-tong-189296.jpg&fm=jpg';">
+                        <div class="card-text mx-3">
+                            <div class="room-type">Entire Complex</div>
+                            <ul class="room-details">
+                                <li>20 Guests</li>
+                                <li>10 Bed</li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Full Holiday House</h5>
+                            <p class="card-text">2 big pools, harbour access, Yacht included.</p>
+                        </div>
+                        <div class="card-footer c-f">
+                            <button type="button" class="btn btn-primary btn-sm">FROM / NIGHT</button>
+                        </div>
+                    </div>
+                    <div class="card col-4 mx-3 my-4">
+                        <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?cs=srgb&dl=pexels-thorsten-technoman-338504.jpg&fm=jpg"
+                            class="card-img-top" alt="holiday picture"
+                            onmouseenter="src='https://images.pexels.com/photos/53577/hotel-architectural-tourism-travel-53577.jpeg?cs=srgb&dl=pexels-pixabay-53577.jpg&fm=jpg';"
+                            onmouseleave="src='https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?cs=srgb&dl=pexels-thorsten-technoman-338504.jpg&fm=jpg';">
+                        <div class="card-text mx-3">
+                            <div class="room-type">Private Room</div>
+                            <ul class="room-details">
+                                <li>2 Guests</li>
+                                <li>1 Bed</li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cozy Double Room</h5>
+                            <p class="card-text">Cozy and quiet. Imagine yourself relaxing at the spa.</p>
+                        </div>
+                        <div class="card-footer c-f">
+                            <button type="button" class="btn btn-primary btn-sm">FROM / NIGHT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-deck col-12 justify-content-center">
+                    <div class="card col-4 mx-3 my-4">
+                        <img src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?cs=srgb&dl=pexels-boonkong-boonpeng-1134176.jpg&fm=jpg"
+                            class="card-img-top" alt="holiday picture"
+                            onmouseenter="src='https://images.pexels.com/photos/671956/pexels-photo-671956.jpeg?cs=srgb&dl=pexels-pietro-jeng-671956.jpg&fm=jpg';"
+                            onmouseleave="src='https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?cs=srgb&dl=pexels-boonkong-boonpeng-1134176.jpg&fm=jpg';">
+                        <div class="card-text mx-3">
+                            <div class="room-type">Entire Apartment</div>
+                            <ul class="room-details">
+                                <li>6 Guests</li>
+                                <li>3 Bed</li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cross-Water Apartment</h5>
+                            <p class="card-text">Bring your friends and have fun. Tropical food and oustading design.
+                            </p>
+                        </div>
+                        <div class="card-footer c-f">
+                            <button type="button" class="btn btn-primary btn-sm">FROM / NIGHT</button>
+                        </div>
+                    </div>
+                    <div class="card col-4 mx-3 my-4">
+                        <img src="https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?cs=srgb&dl=pexels-konstantinos-eleftheriadis-2034335.jpg&fm=jpg"
+                            class="card-img-top" alt="holiday picture"
+                            onmouseenter="src='https://images.pexels.com/photos/2771927/pexels-photo-2771927.jpeg?cs=srgb&dl=pexels-engin-akyurt-2771927.jpg&fm=jpg';"
+                            onmouseleave="src='https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?cs=srgb&dl=pexels-konstantinos-eleftheriadis-2034335.jpg&fm=jpg';">
+                        <div class="card-text mx-3">
+                            <div class="room-type">Entire Apartment</div>
+                            <ul class="room-details">
+                                <li>4 Guests</li>
+                                <li>2 Bed</li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hill Apartment</h5>
+                            <p class="card-text">See yourself above the lights of the city and relax in your private
+                                outdoor pool.</p>
+                        </div>
+                        <div class="card-footer c-f">
+                            <button type="button" class="btn btn-primary btn-sm">FROM / NIGHT</button>
+                        </div>
+                    </div>
+                    <div class="card col-4 mx-3 my-4 mb-5">
+                        <img src="https://images.pexels.com/photos/297984/pexels-photo-297984.jpeg?cs=srgb&dl=pexels-nikolaj-erema-297984.jpg&fm=jpg"
+                            class="card-img-top" alt="holiday picture"
+                            onmouseenter="src='https://images.pexels.com/photos/2684260/pexels-photo-2684260.jpeg?cs=srgb&dl=pexels-engin-akyurt-2684260.jpg&fm=jpg';"
+                            onmouseleave="src='https://images.pexels.com/photos/297984/pexels-photo-297984.jpeg?cs=srgb&dl=pexels-nikolaj-erema-297984.jpg&fm=jpg';">
+                        <div class="card-text mx-3">
+                            <div class="room-type">Private Room</div>
+                            <ul class="room-details">
+                                <li>2 Guests</li>
+                                <li>1 Bed</li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Double Room</h5>
+                            <p class="card-text">We brought you colorful rooms with ocean view and healthy food.</p>
+                        </div>
+                        <div class="card-footer c-f">
+                            <button type="button" class="btn btn-primary btn-sm">FROM / NIGHT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end col-4 offset-8">
+                        <li class="page-item"><a class="page-link"><span class="fa-stack fa-lg">
+                                    <i class="fa fa-caret-left fa-stack-1x"></i>
+                                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                </span></a></li>
+                        <li class="page-item active"><a class="page-link" href="#"><span class="fa-stack fa-lg">
+                                    <i class="fa fa-1 fa-stack-1x"></i>
+                                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                </span></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><span class="fa-stack fa-lg">
+                                    <i class="fa fa-2 fa-stack-1x"></i>
+                                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                </span></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><span class="fa-stack fa-lg">
+                                    <i class="fa fa-3 fa-stack-1x"></i>
+                                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                </span></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><span class="fa-stack fa-lg">
+                                    <i class="fa fa-4 fa-stack-1x"></i>
+                                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                </span></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><span class="fa-stack fa-lg">
+                                    <i class="fa fa-5 fa-stack-1x"></i>
+                                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                </span></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><span class="fa-stack fa-lg">
+                                    <i class="fa-solid fa-caret-right fa-stack-1x"></i>
+                                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                </span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row pt-5 w-100">
+        <div class="col-3 offset-1">
+            <a class="link" href="https://www.db.com/index?language_id=1&kid=sl.redirect-en.shortcut"><span></span><i
+                    class="fa-solid fa-boxes-stacked fa-2x fa-rotate-180"></i></span></a>
+        </div>
+        <div class="col-2">
+            <h6>company</h6>
+        </div>
+        <div class="col-2">
+            <h6>resources</h6>
+        </div>
+        <div class="col-2">
+            <h6>help & support</h6>
+        </div>
+        <div class="col-2">
+            <h6>legal</h6>
+        </div>
+    </div>
+    <div class="row w-100">
+        <div class="col-2 offset-1">
+            <h5>DB Summer School</h5>
+        </div>
+    </div>
+    <div class="row w-100">
+        <div class="col-1 offset-1">
+            <a class="link" href="https://www.facebook.com/"><span><i class="fa-brands fa-facebook"></i></span></a>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <a class="link" href="https://twitter.com/"><span></span><i class="fa-brands fa-twitter"></i>
+                </span></a>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <a class="link" href="https://www.google.com/"><span></span><i class="fa-sharp fa-solid fa-globe"></i>
+                </span></a>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <a class="link" href="https://github.com/"><span></span><i class="fa-brands fa-square-github"></i>
+                </span></a>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <a class="link" href="https://www.youtube.com/"><span></span><i class="fa-brands fa-youtube"></i>
+                </span></a>
+        </div>
+    </div>
+    <div class="row w-100">
+        <div class="col-9 offset-3">
+            All rights reserved. Copyright
+            <span>
+                <div> <i class="fa-regular fa-copyright"></i> </div>
+            </span>
+            2022 DB Summer School by Avramescu Cosmin - grupa B.
+        </div>
+    </div>
+
+</body>
+
+
+</html>

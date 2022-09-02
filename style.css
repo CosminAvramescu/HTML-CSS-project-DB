@@ -1,0 +1,131 @@
+html>body {
+    background-color: gainsboro;
+}
+
+.row>div {
+    display: flex;
+}
+
+ul>li:first-child>a>span:hover {
+    transform: translateX(-20px);
+    transform: scale(1.5, 1.5);
+}
+
+ul>li:last-child>a>span:hover {
+    transform: matrix(1.2, 0.2, -1, 0.9, 0, 20) scale(2, 2);
+}
+
+.card-footer>button:hover {
+    transform: translateY(5px) rotate(3.124rad);
+    border: 3px dashed red;
+    transition-duration: 2s;
+}
+
+.container-fluid>div {
+    right: 0;
+}
+
+.wrapper-card {
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 1;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.container-fluid>div {
+    margin-top: -100px;
+}
+
+.btn-sm {
+    background-color: aliceblue;
+    color: blue;
+    border-radius: 8px;
+}
+
+.fa-x {
+    transform: translateY(10px);
+}
+
+.room-details {
+    display: flex;
+    float: left;
+}
+
+.page-item.active .page-link {
+    background-color: rgb(52, 162, 205);
+    border-radius: 20px;
+}
+
+.room-type {
+    float: left;
+}
+
+li:last-child {
+    margin-left: 20px;
+}
+
+#search-button {
+    padding: 10px 80px;
+}
+
+.c-f {
+    border: none;
+    background-color: white;
+}
+
+.card-footer {
+    border: none;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.page-item>a {
+    border: none;
+}
+
+#depart {
+    border: 1px solid Gainsboro;
+}
+
+i {
+    color: darkslategray;
+}
+
+.card-img-top {
+    height: 325px;
+}
+
+#search-button {
+    position: relative;
+    animation-name: search-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes search-animation {
+    25% {
+        background-color: MediumOrchid;
+        right: 0;
+    }
+
+    50% {
+        background-color: DeepSkyBlue;
+        right: 50px;
+    }
+
+    75% {
+        background-color: MediumSeaGreen;
+        right: 50px;
+    }
+
+    100% {
+        background-color: MediumOrchid;
+        right: 0;
+    }
+}
